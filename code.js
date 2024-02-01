@@ -9,5 +9,3 @@ function divideAndConquerSum(a) {
     const sum3 = divideAndConquerSum(a.slice(2 * partSize, n));
     return sum1 + sum2 + sum3;
 }
-
-

@@ -10,8 +10,8 @@ function divideAndConquerSum(a) {
 
     // Conquer: Recursively compute the sum of each part
     const sum1 = divideAndConquerSum(a.slice(0, partSize));
-    const sum2 = divideAndConquerSum(a.slice(partSize, 2 * partSize));
-    const sum3 = divideAndConquerSum(a.slice(2 * partSize, n));
+    const sum2 = divideAndConquerSum(a.slice(partSize, Math.min(2 * partSize, n)));
+    const sum3 = divideAndConquerSum(a.slice(Math.min(2 * partSize, n), n));
 
     // Combine: Return the sum of the three sub-arrays
     return sum1 + sum2 + sum3;

@@ -6,7 +6,7 @@ function divideAndConquerSum(a) {
     
     // Divide the array into three parts
     const n = a.length;
-    const partSize = Math.floor(n / 3);
+    const partSize = Math.max(1, Math.floor(n / 3)); // Ensure partSize is at least 1
 
     // Conquer: Recursively compute the sum of each part
     const sum1 = divideAndConquerSum(a.slice(0, partSize));

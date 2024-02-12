@@ -9,3 +9,4 @@ function divideAndConquerSum(a) {
     const sum3 = divideAndConquerSum(a.slice(Math.min(2 * partSize, n), n));
     return sum1 + sum2 + sum3;
 }
+module.exports = divideAndConquerSum;

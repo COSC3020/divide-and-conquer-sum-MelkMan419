@@ -6,11 +6,10 @@ function divideAndConquerSum(a) {
         return a[0];
     }
     const n = a.length;
-    const partSize = Math.floor(n / 3); 
+    const partSize = Math.floor(n / 2);
     const sum1 = divideAndConquerSum(a.slice(0, partSize));
-    const sum2 = divideAndConquerSum(a.slice(partSize, 2 * partSize));
-    const sum3 = divideAndConquerSum(a.slice(2 * partSize, n));
-    return sum1 + sum2 + sum3;
+    const sum2 = divideAndConquerSum(a.slice(partSize, n));
+    return sum1 + sum2;
 }
 
 module.exports = divideAndConquerSum;

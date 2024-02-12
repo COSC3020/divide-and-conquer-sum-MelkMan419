@@ -2,11 +2,15 @@ function divideAndConquerSum(a) {
     if (a.length === 0) {
         return 0;
     }
+    if (a.length === 1) {
+        return a[0];
+    }
     const n = a.length;
-    const partSize = Math.max(1, Math.floor(n / 3)); // Ensure partSize is at least 1
+    const partSize = Math.floor(n / 3); 
     const sum1 = divideAndConquerSum(a.slice(0, partSize));
-    const sum2 = divideAndConquerSum(a.slice(partSize, Math.min(2 * partSize, n)));
-    const sum3 = divideAndConquerSum(a.slice(Math.min(2 * partSize, n), n));
+    const sum2 = divideAndConquerSum(a.slice(partSize, 2 * partSize));
+    const sum3 = divideAndConquerSum(a.slice(2 * partSize, n));
     return sum1 + sum2 + sum3;
 }
+
 module.exports = divideAndConquerSum;

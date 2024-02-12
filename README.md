@@ -26,3 +26,20 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+T(n) = 2 * T(n/2) + O(n)
+
+T(n/2) represents the time taken to process each half of the array recursively, and O(n) represents the time taken to sum the elements of the array.
+
+Using the master theorem to solve the recurrence relation, we find that a = 2, b = 2, and f(n) = O(n).
+
+The master theorem states that if:
+
+f(n) = O(n^c) where c < log_b(a), then T(n) = Θ(n^log_b(a)).
+f(n) = Θ(n^c) where c = log_b(a), then T(n) = Θ(n^c * log n).
+f(n) = Ω(n^c) where c > log_b(a), and if af(n/b) ≤ kf(n) for some constant k < 1 and sufficiently large n, then T(n) = Θ(f(n)).
+In our case, f(n) = O(n), a = 2, b = 2, and c = 1.
+
+Since c = 1 = log_b(a), we fall under case 2 of the master theorem. Therefore, T(n) = Θ(n * log n).
+
+Hence, the final big theta complexity of the algorithm is Θ(n * log n).

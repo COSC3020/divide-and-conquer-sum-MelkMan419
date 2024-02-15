@@ -27,7 +27,7 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-basecase is 1 if t(n) is less than or equal to 2
+basecase is 0 if t(n) is less than or equal to 2
 
 T(n) = 3 * T(n/3) + 1
 

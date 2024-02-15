@@ -27,9 +27,9 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-T(n) = 2 * T(n/2) + O(n)
+T(n) = 3 * T(n/3) + 1
 
-T(n/2) represents the time taken to process each half of the array recursively, and O(n) represents the time taken to sum the elements of the array.
+T(n/3) represents the time taken to process each third of the array recursively, and 1 represents the time taken to sum the elements of the array since it's constant.
 
 Using the master theorem to solve the recurrence relation, we find that a = 2, b = 2, and f(n) = O(n).
 

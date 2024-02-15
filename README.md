@@ -33,3 +33,5 @@ T(n) = 3 * T(n/3) + 1
 
 T(n/3) represents the time taken to process each third of the array recursively, and 1 represents the time taken to sum the elements of the array since it's constant.
 
+The work done at each level of recursion is O(n), and the depth of the recursion tree is O(n), and the depth of the recursion tree is O( $\log_3$ n)
+Therefore, the overall time complexity is \( $\Theta$ (n $\log_3$ n) \)

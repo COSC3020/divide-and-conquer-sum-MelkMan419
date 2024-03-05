@@ -32,6 +32,10 @@ basecase is 0 if t(n) is less than or equal to 2
 T(n) = 3 * T(n/3) + 1
 
 T(n/3) represents the time taken to process each third of the array recursively, and 1 represents the time taken to sum the elements of the array since it's constant.
+Using the Master Theorem to solve this recurrence relation:
 
-The work done at each level of recursion is O(n), and the depth of the recursion tree is O(n), and the depth of the recursion tree is O( $\log_3$ n)
-Therefore, the overall time complexity is \( $\Theta$ (n $\log_3$ n) \)
+Given \(a = 3\), \(b = 3\), and \(f(n) = O(n)\):
+
+We're dealing with Case 1 of the Master Theorem, where \(f(n) = O(n)\) is polynomially larger than $\(n^{\log_b(a)} = n^{\log_3(3)} = n$\).
+
+Therefore, the solution to the recurrence relation is \( $\Theta(n) $\).

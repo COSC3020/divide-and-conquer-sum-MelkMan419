@@ -29,9 +29,9 @@ most important part. Add your answer to this markdown file.
 
 basecase is 0 if t(n) is less than or equal to 2
 
-T(n) = 3 * T(n/3) + 1
+T(n) = 3 * T(n/3) + O(n)
 
-T(n/3) represents the time taken to process each third of the array recursively, and 1 represents the time taken to sum the elements of the array since it's constant.
+T(n/3) represents the time taken to process each third of the array recursively, and O(n) represents the time taken to sum the elements of the array since it's constant.
 Using the Master Theorem to solve this recurrence relation:
 
 Given \(a = 3\), \(b = 3\), and \(f(n) = O(n)\):

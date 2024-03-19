@@ -34,8 +34,8 @@ T(n) = 3 * T(n/3) + C
 T(n/3) represents the time taken to process each third of the array recursively, and the constant C represents the time taken to sum the elements of the array since it's constant.
 Using the Master Theorem to solve this recurrence relation:
 
-Given \(a = 3\), \(b = 3\), and  $f(n) = O(n)$::
+Given \(a = 3\), \(b = 3\), and  $f(n) \in O(n)$:
 
-We're dealing with Case 1 of the Master Theorem, where  $f(n) = O(n)$: is polynomially larger than $\(n^{\log_b(a)} = n^{\log_3(3)} = n$\).
+We're dealing with Case 1 of the Master Theorem, where  $f(n) \in O(n)$: is polynomially larger than $\(n^{\log_b(a)} = n^{\log_3(3)} = n$\).
 
 Therefore, the solution to the recurrence relation is \( $\Theta(n) $\).

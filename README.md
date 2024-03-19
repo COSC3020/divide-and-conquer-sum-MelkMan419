@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/E1vcEWuv)
 # Divide and Conquer Sum
 
 In the lectures, we've covered merge sort, which uses a divide-and-conquer
@@ -25,3 +26,16 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+basecase is 0 if t(n) is less than or equal to 2
+
+T(n) = 3 * T(n/3) + C
+
+T(n/3) represents the time taken to process each third of the array recursively, and the constant C represents the time taken to sum the elements of the array since it's constant.
+Using the Master Theorem to solve this recurrence relation:
+
+Given \(a = 3\), \(b = 3\), and  $f(n) \in O(n)$:
+
+We're dealing with Case 1 of the Master Theorem, where  $f(n) \in O(n)$: is polynomially larger than $\(n^{\log_b(a)} = n^{\log_3(3)} = n$\).
+
+Therefore, the solution to the recurrence relation is \( $\Theta(n) $\).
